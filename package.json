@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-dev",
+  "version": "1.0.0",
+  "description": "DockerNodejsBuild",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "webnostix",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.5",
+    "lodash": "^4.17.4",
+    "yargs": "^4.7.1"
+  }
+}
