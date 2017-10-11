@@ -19,7 +19,8 @@ if (command == 'add') {
 } else if (command === 'list') {
     notes.listNotes();
 } else if (command === 'read') {
-    notes.getNote(argv.title);
+   var note = notes.getNote(argv.title);
+    note ? notes.logNote(note)  : console.log("note not found");
 } else if (command === 'remove') {
     var noteRemoved = notes.deleteNote(argv.title);
     var message = noteRemoved ? 'Note was removed' : 'Note not found';
