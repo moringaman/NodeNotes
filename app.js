@@ -17,7 +17,10 @@ if (command == 'add') {
     var note = notes.addNote(argv.title, argv.body);
     !note ? console.log("there was a problem") : console.log(`sucessfully written : ${note.title}`);
 } else if (command === 'list') {
-    notes.listNotes();
+    var allNotes = notes.listNotes();
+    debugger;
+    console.log(`listing all: ${allNotes.length} note(s)`);
+	allNotes.forEach((note) => notes.logNote(note));
 } else if (command === 'read') {
    var note = notes.getNote(argv.title);
     note ? notes.logNote(note)  : console.log("note not found");

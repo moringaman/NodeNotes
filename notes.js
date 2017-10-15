@@ -35,6 +35,7 @@ var addNote = (title, body) => {
 
 var listNotes = () => {
     console.log('listing all notes');
+    return fetchNotes();
 }
 
 var logNote = (note) => {
@@ -56,6 +57,7 @@ var getNote = (title) => {
     var selectedNote = notes.filter((note) => note.title === title);
     return selectedNote[0]; 
 }
+
 
 module.exports = {
     addNote,
